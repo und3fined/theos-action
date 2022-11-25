@@ -20,7 +20,7 @@ runs:
     - name: prepare environment
       shell: bash
       run: |
-        arch -x86_64 brew install ldid make
+        arch -arm64 brew install ldid make
         echo "THEOS=$GITHUB_WORKSPACE/${{ inputs.theos-dir }}" >> $GITHUB_ENV
         PATH="$(brew --prefix make)/libexec/gnubin:$PATH" >> $GITHUB_ENV
         echo "Succesfully installed tools!"
